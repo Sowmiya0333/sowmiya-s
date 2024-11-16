@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('project') }}">Project</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <img src="{{ url_for('static', filename='image/sowmi.jpg') }}" alt="Profile Image" class="profile-img">
+            <h1>Sowmiya S</h1>
+            <h2>AI | ML | Python Developer</h2>
+            <b><p>Welcome to my portfolio! I'm an AI and Machine Learning Developer dedicated to creating impactful solutions through data-driven insights and algorithms.With expertise in Python, I strive to enhance business intelligence and foster innovation through AI...</p><b>
+
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="vision-container">
+            <h2>Vision</h2>
+            <p>To be a catalyst in the digital transformation of global learning, making quality resources universally accessible and empowering individuals to unlock their full potential. I envision a world where digital knowledge is a bridge to opportunity, growth, and innovation for all...</p>
+
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <h2>Mission</h2>
+            <p>To create innovative, scalable digital platforms that democratize access to knowledge and tools, fostering a culture of continuous learning. By designing user-centric solutions that are inclusive and intuitive, I aim to lead the way in shaping a digital future where everyone, regardless of background, has the resources to succeed...</p>
+        </div>
+    </section>
+
+</body>
+
+<!-- Footer Section -->
+<!-- footer.html -->
+<footer>
+    <div class="footer-container">
+        <a href="https://www.linkedin.com/in/sowmiya-s-91776424b/" target="_blank">
+            <img src="{{ url_for('static', filename='image/l.png') }}" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/Sowmiya0333" target="_blank">
+            <img src="{{ url_for('static', filename='image/git.png') }}" alt="GitHub" class="social-icon">
+        </a>
+    </div>
+</footer>
+
+
+</html>

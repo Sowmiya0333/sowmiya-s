@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Optional CSS for animation and toggle button */
+        section {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);
+        }
+        section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav ul.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: inline-block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+            }
+        }
+
+        .skills-section {
+            padding: 20px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hard-skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hard-skills img {
+            margin: 10px;
+            width: 50px;  /* Adjust icon size */
+            height: 50px; /* Adjust icon size */
+            transition: transform 0.3s ease;
+        }
+
+        .hard-skills img:hover {
+            transform: scale(1.1); /* Add a hover effect */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Me</a></li>
+                <li><a href="{{ url_for('project') }}">Project</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-me-section">
+        <div class="about-container">
+            <h1>About Me</h1>
+            <b><p>I'm Sowmiya S, an AI and Machine Learning Developer with a robust expertise in Python, committed to solving real-world challenges through innovative technology. My journey in AI is driven by a passion for creating impactful, data-driven solutions that empower businesses and individuals. I strive to lead the way in AI development, shaping a future where technology drives positive change and growth...</p><b>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <div class="education-container">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.Tech in Artificial Intelligence and Data Science</strong> - CARE College of Engineering, Trichy <span>(CGPA: 8.93)</span></li>
+                <li><strong>Higher Secondary</strong> - Mangalore Model School, Cuddalore <span>(74.4%)<span></li>
+                <li><strong>Secondary School</strong> - Mangalore Model School, Cuddalore <span>(88%)</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <div class="hard-skills">
+                <img src="{{ url_for('static', filename='image/icons8-python-50.png') }}" alt="Python Icon">
+                <img src="{{ url_for('static', filename='image/icons8-flask-50.png') }}" alt="Flask Icon">
+                <img src="{{ url_for('static', filename='image/icons8-machine-learning-50.png') }}" alt="Machine Learning Icon">
+                <img src="{{ url_for('static', filename='image/icons8-deep-learning-50.png') }}" alt="Deep Learning Icon">
+                <img src="{{ url_for('static', filename='image/icons8-nlp-32.png') }}" alt="NLP Icon">
+                <img src="{{ url_for('static', filename='image/icons8-mysql-50.png') }}" alt="MySQL Icon">
+                <img src="{{ url_for('static', filename='image/mongo.png') }}" alt="Mango Icon">
+                <img src="{{ url_for('static', filename='image/icons8-html-50.png') }}" alt="HTML Icon">
+                <img src="{{ url_for('static', filename='image/icons8-css-50.png') }}" alt="CSS Icon">
+                <img src="{{ url_for('static', filename='image/icons8-javascript-50.png') }}" alt="JavaScript Icon">
+                <img src="{{ url_for('static', filename='image/tabu.png') }}" alt="tab Icon">
+            </div>
+        </div>
+    </section>
+
+    <section class="internships-section">
+        <div class="internships-container">
+            <h2>Internships</h2>
+            <ul>
+                <b><li><strong>Web Venture India Private Limited</strong><b> - Developed Trichy.com (Job portal) <span>(Jan 2024 - May 2024)</span></li>
+                <b><li><strong>Shalom InfoTech, Trichy</strong><b> - Hotel review sentiment analysis project <span>(Jul 2023 - Aug 2023)</span></li>
+                <li><strong>VEI Technology, Chennai</strong> - Object detection project (Online) <span>(Jul 2022 - Aug 2022)</span></li>
+                <li><strong>NSIC</strong> - AI integrated with IoT facilities <span>(Jul 2022 - Aug 2022)</span></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="achievements-section">
+        <div class="achievements-container">
+            <h2>Achievements</h2>
+            <ul>
+                <li><span>Best Outgoing Student</span> CARE College of Engineering (2023-2024)</li>
+                <li>KIMO Tech competition -<span>Rank 1</span></li>
+                <li><span>Best Performer</span> award from Naan Mudhalvan, Titan LeAP Employability Skill Development</li>
+                <li><span>Badminton winner</span> at Zonal, District, Division levels; Runner-Up in State</li>
+                <li><span>Secured 2nd rank</span> in Higher Secondary Schooling</li>
+                <li><span>Rank Holder</span> in College during first two years</li>
+            </ul>
+        </div>
+    </section>
+    
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Immediately apply 'animate' class to each section on load
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('animate');
+        });
+    
+        // Smooth scroll behavior for in-page links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) { 
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    
+</script>
+
+<footer>
+    <div class="footer-container">
+        <a href="https://www.linkedin.com/in/sowmiya-s-91776424b/" target="_blank">
+            <img src="{{ url_for('static', filename='image/l.png') }}" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/Sowmiya0333" target="_blank">
+            <img src="{{ url_for('static', filename='image/git.png') }}" alt="GitHub" class="social-icon">
+        </a>
+    </div>
+</footer>
+
+</html>

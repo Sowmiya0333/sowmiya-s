@@ -1,0 +1,281 @@
+/* Reset and Font Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    color: #080811; /* Dark text color */
+    background: linear-gradient(to bottom, #1d1c1c, #1d1a1a); /* Very dark background */
+    transition: background-color 0.5s;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(18, 18, 18, 0.95); /* Dark background for header */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #cea477; /* Warm, light color */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: linear-gradient(90deg, #4b6b58, #2f4f4f); /* Sage and dark green */
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+.about-me-section {
+    padding-top: 100px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(250, 250, 250, 0.9); /* Light container */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Section Headings */
+h1, h2 {
+    font-size: 25px;
+    color: #4d3720;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+p {
+    font-size: 20px;
+    color: #1a1717; /* Dark text */
+    line-height: 1.7;
+    padding: 0 20px;
+}
+
+/* Education Section */
+.education-section {
+    margin-top: 40px;
+}
+
+.education-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 30px;
+    background: rgba(250, 250, 250, 0.9); /* Light container */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.education-container ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+.education-container span {
+    font-size: 18px;
+    color: #615d5d;
+}
+
+
+.education-container li {
+    font-size: 20px;
+    color: #1a1717;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(250, 250, 250, 0.9); /* Light container */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Skills Icons */
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-icons li {
+    list-style: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-icons li:hover {
+    transform: translateY(-5px);
+}
+
+.skills-icons li img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.skills-icons li:hover img {
+    transform: scale(1.2);
+}
+
+.skills-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.skills-container ul li {
+    margin: 5px;
+}
+
+/* Internships and Achievements Sections */
+.internships-section, .achievements-section {
+    margin-top: 40px;
+}
+
+.internships-container, .achievements-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(250, 250, 250, 0.9); /* Light container */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.internships-container ul, .achievements-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.internships-container li, .achievements-container li {
+    font-size: 20px;
+    color: #1a1717;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.internships-container h2, .achievements-container h2 {
+    color: #4d3720;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.achievements-container span {
+    font-size: 18px;
+    color: #615d5d;
+}
+
+
+.internships-container span {
+    font-size: 18px;
+    color: #615d5d;
+}
+
+
+/* Hover effect for headers */
+h1:hover, h2:hover {
+    color: #4b6b58;
+}
+
+footer {
+    background: rgba(18, 18, 18, 0.9); /* Dark footer */
+    padding: 20px 0;
+    text-align: center;
+    color: #c4a484;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #c4a484;
+}
+
+.footer-container p {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .about-container, .education-container, .skills-container, .internships-container, .achievements-container {
+        padding: 20px;
+    }
+    h1, h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+}

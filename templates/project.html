@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='project.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('project') }}" class="active">Project</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <!-- Profile Section (Optional) -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <p>Welcome to my projects ! Explore the various projects that I have developed, showcasing my expertise in AI, ML, Python, and other domains. I am committed to building impactful solutions for real-world challenges.</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <!-- E-commerce Projects -->
+        <div class="project-category" id="ecommerce">
+            <center><h2>E-commerce</h2></center>
+            <div class="project-container">
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/job.png') }}" alt="Trichy.Com Project Image" class="project-img">
+                    <h3>Trichy.Com</h3>
+                    <p>I developed the business logic for a job application platform using Python and the Flask framework. By leveraging Flask, I built a seamless backend system that enables job seekers to easily apply for positions through the website,providing a user-friendly experience for both employers and candidates.</p>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/forcan.png') }}" alt="FAR-CON Web App Project Image" class="project-img">
+                    <h3>FAR-CON Web App</h3>
+                    <p>I collaborated with a colleague on the FAR-CON web app, which allows farmers to directly sell their products to consumers without intermediaries.This project was fully handled by our team(Mohan S| sowmiya | Ragunath), contributing to a more transparent and accessible marketplace for agricultural products...</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- AI and Machine Learning Projects -->
+        <div class="project-category" id="ai-ml">
+            <center><h2>AI & Machine Learning</h2></center>
+            <div class="project-container">
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/info.png') }}" alt="Text Extraction Project Image" class="project-img">
+                    <h3>Text Extraction from Images</h3>
+                    <p>Extracted text from images using Tesseract and a pre-trained Hugging Face model...</p>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/crop.png') }}" alt="Crop Recommendation System Project Image" class="project-img">
+                    <h3>Crop Recommendation System</h3>
+                    <p>Developed a system to recommend suitable crops using machine learning...</p>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/senti.png') }}" alt="Hotel Review Sentiment Analysis Project Image" class="project-img">
+                    <h3>Hotel Review Sentiment Analysis</h3>
+                    <p>Developed a web app to gather customer reviews and perform sentiment analysis to enhance the hotel's offerings...</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sports Projects -->
+        <div class="project-category" id="sports">
+            <center><h2>Sports</h2></center>
+            <div class="project-container">
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/cricket.png') }}" alt="IPL Score Prediction Project Image" class="project-img">
+                    <h3>IPL Score Prediction</h3>
+                    <p>Used regression algorithm to predict scores and determine the winner...</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Education Projects -->
+        <div class="project-category" id="education">
+            <center><h2>Education</h2></center>
+              <div class="project-container">
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/atted.jpeg') }}" alt="Attendance System Project Image" class="project-img">
+                    <h3>Attendance System Using Image Recognition</h3>
+                    <p>Built an attendance system utilizing face recognition through deep learning algorithms and OpenCV...</p>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='image/crm.png') }}" alt="Attendance System Project Image" class="project-img">
+                    <h3>Care College CRM</h3>
+                    <p>I am a member of my college's CRM development team, with experience in API creation, frontend development, and database schema design....</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <a href="https://www.linkedin.com/in/sowmiya-s-91776424b/" target="_blank">
+            <img src="{{ url_for('static', filename='image/l.png') }}" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/Sowmiya0333" target="_blank">
+            <img src="{{ url_for('static', filename='image/git.png') }}" alt="GitHub" class="social-icon">
+        </a>
+    </div>
+</footer>
+</html>
