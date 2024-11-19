@@ -1,19 +1,17 @@
-from flask import Flask, render_template, request, redirect ,flash,url_for
-import gspread
-from google.oauth2.service_account import Credentials
+from flask import Flask, render_template, request, redirect, flash, url_for
+import pymysql
 import os
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-# Google Sheets API setup
-SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_file("credentials.json", scopes=SCOPES)
-client = gspread.authorize(creds)
-
-# Open the Google Sheet (replace `YOUR_SHEET_ID` with the ID of your sheet)
-sheet = client.open_by_key("1TE29cDRptxhP6GN7OhPHyoNoBnGTsbb1L0bFwvtLuHE")
-worksheet = sheet.sheet1  # Select the first sheet in the Google Spreadsheet
+# MySQL database connection setup
+conn = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    db='portfolio',
+)
 
 @app.route('/')
 def home():
@@ -35,12 +33,18 @@ def contact():
         email = request.form['email']
         subject = request.form['subject']
         message = request.form['message']
-        
-        # Handle the data (e.g., store it, send an email, etc.)
-        worksheet.append_row([name, email, subject, message])
-        
-        # Flash the success message
-        flash("Thank you for contacting Me! Have a great dayyy", "success")
+
+        # Insert the data into the MySQL database
+        try:
+            with conn.cursor() as cursor:
+                sql = "INSERT INTO contacts (name, email, subject, message) VALUES (%s, %s, %s, %s)"
+                cursor.execute(sql, (name, email, subject, message))
+            conn.commit()
+            flash("Thank you for contacting Me! Have a great dayyy", "success")
+        except Exception as e:
+            conn.rollback()
+            flash("An error occurred. Please try again.", "danger")
+            print(f"Error: {e}")
     
     return render_template('contact.html')
 
