@@ -11,6 +11,7 @@ conn = pymysql.connect(
     user='root',
     password='',
     db='portfolio',
+    port=3306  
 )
 
 @app.route('/')
