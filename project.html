@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='project.css') }}">
+    <link rel="stylesheet" href="project.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,9 +12,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('project') }}" class="active">Project</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html"class="active">Project</a></li>
             </ul>            
         </nav>
     </header>
@@ -32,12 +32,12 @@
             <center><h2>E-commerce</h2></center>
             <div class="project-container">
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/job.png') }}" alt="Trichy.Com Project Image" class="project-img">
+                    <img src="image/job.png" alt="Trichy.Com Project Image" class="project-img">
                     <h3>Trichy.Com</h3>
                     <p>I developed the business logic for a job application platform using Python and the Flask framework. By leveraging Flask, I built a seamless backend system that enables job seekers to easily apply for positions through the website,providing a user-friendly experience for both employers and candidates.</p>
                 </div>
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/forcan.png') }}" alt="FAR-CON Web App Project Image" class="project-img">
+                    <img src="image/forcan.png" alt="FAR-CON Web App Project Image" class="project-img">
                     <h3>FAR-CON Web App</h3>
                     <p>I collaborated with a colleague on the FAR-CON web app, which allows farmers to directly sell their products to consumers without intermediaries.This project was fully handled by our team(Mohan S| sowmiya | Ragunath), contributing to a more transparent and accessible marketplace for agricultural products...</p>
                 </div>
@@ -49,17 +49,17 @@
             <center><h2>AI & Machine Learning</h2></center>
             <div class="project-container">
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/info.png') }}" alt="Text Extraction Project Image" class="project-img">
+                    <img src="image/info.png" alt="Text Extraction Project Image" class="project-img">
                     <h3>Text Extraction from Images</h3>
                     <p>Extracted text from images using Tesseract and a pre-trained Hugging Face model...</p>
                 </div>
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/crop.png') }}" alt="Crop Recommendation System Project Image" class="project-img">
+                    <img src="image/crop.png" alt="Crop Recommendation System Project Image" class="project-img">
                     <h3>Crop Recommendation System</h3>
                     <p>Developed a system to recommend suitable crops using machine learning...</p>
                 </div>
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/senti.png') }}" alt="Hotel Review Sentiment Analysis Project Image" class="project-img">
+                    <img src="image/senti.png" alt="Hotel Review Sentiment Analysis Project Image" class="project-img">
                     <h3>Hotel Review Sentiment Analysis</h3>
                     <p>Developed a web app to gather customer reviews and perform sentiment analysis to enhance the hotel's offerings...</p>
                 </div>
@@ -71,7 +71,7 @@
             <center><h2>Sports</h2></center>
             <div class="project-container">
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/cricket.png') }}" alt="IPL Score Prediction Project Image" class="project-img">
+                    <img src="image/cricket.png" alt="IPL Score Prediction Project Image" class="project-img">
                     <h3>IPL Score Prediction</h3>
                     <p>Used regression algorithm to predict scores and determine the winner...</p>
                 </div>
@@ -83,12 +83,12 @@
             <center><h2>Education</h2></center>
               <div class="project-container">
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/atted.jpeg') }}" alt="Attendance System Project Image" class="project-img">
+                    <img src="image/atted.jpeg" alt="Attendance System Project Image" class="project-img">
                     <h3>Attendance System Using Image Recognition</h3>
                     <p>Built an attendance system utilizing face recognition through deep learning algorithms and OpenCV...</p>
                 </div>
                 <div class="project-item">
-                    <img src="{{ url_for('static', filename='image/crm.png') }}" alt="Attendance System Project Image" class="project-img">
+                    <img src="image/crm.png" alt="Attendance System Project Image" class="project-img">
                     <h3>Care College CRM</h3>
                     <p>I am a member of my college's CRM development team, with experience in API creation, frontend development, and database schema design....</p>
                 </div>
@@ -102,10 +102,10 @@
 <footer>
     <div class="footer-container">
         <a href="https://www.linkedin.com/in/sowmiya-s-91776424b/" target="_blank">
-            <img src="{{ url_for('static', filename='image/l.png') }}" alt="LinkedIn" class="social-icon">
+            <img src="image/l.png" alt="LinkedIn" class="social-icon">
         </a>
         <a href="https://github.com/Sowmiya0333" target="_blank">
-            <img src="{{ url_for('static', filename='image/git.png') }}" alt="GitHub" class="social-icon">
+            <img src="image/git.png" alt="GitHub" class="social-icon">
         </a>
     </div>
 </footer>
