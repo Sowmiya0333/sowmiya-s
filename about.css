@@ -22,6 +22,68 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
 }
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: inline-block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+.skills-section {
+    padding: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hard-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hard-skills img {
+    margin: 10px;
+    width: 50px;  /* Adjust icon size */
+    height: 50px; /* Adjust icon size */
+    transition: transform 0.3s ease;
+}
+
+.hard-skills img:hover {
+    transform: scale(1.1); /* Add a hover effect */
+}
 
 nav ul {
     list-style: none;
@@ -272,7 +334,7 @@ footer {
 @media (max-width: 768px) {
     body {
         font-family: 'Hahmlet', sans-serif;    
-        font-size: 16px;
+        font-size: 15px;
     }
     h1 {
         font-size: 22px;
@@ -281,6 +343,6 @@ footer {
         font-size: 18px;
     }
     p {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
