@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Dancing Script', cursive; /* Changed font */
+    font-family: 'Hahmlet', sans-serif;    
     color: #080811; /* Dark text color */
     background: linear-gradient(to bottom, #1d1c1c, #1d1a1a); /* Very dark background */
     transition: background-color 0.5s;
@@ -224,16 +224,17 @@ h1:hover, h2:hover {
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
-    .profile-container, .vision-container, .mission-container {
-        padding: 20px;
+    body {
+        font-family: 'Hahmlet', sans-serif;    
+        font-size: 16px;
     }
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
     h2 {
         font-size: 18px;
     }
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }

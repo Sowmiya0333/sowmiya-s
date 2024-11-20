@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Hahmlet', sans-serif;    
     color: #080811; /* Dark text color */
     background: linear-gradient(to bottom, #1d1c1c, #1d1a1a); /* Very dark background */
     transition: background-color 0.5s;
@@ -50,7 +50,7 @@ nav ul li a.active {
 
 /* About Section */
 .about-me-section {
-    padding-top: 100px;
+    padding-top: 50px;
     text-align: center;
     color: #ffffff;
 }
@@ -186,6 +186,7 @@ p {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     text-align: center;
     animation: fadeIn 1.5s ease;
+    margin-bottom: 40px;
 }
 
 .internships-container ul, .achievements-container ul {
@@ -269,13 +270,17 @@ footer {
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
-    .about-container, .education-container, .skills-container, .internships-container, .achievements-container {
-        padding: 20px;
+    body {
+        font-family: 'Hahmlet', sans-serif;    
+        font-size: 16px;
     }
-    h1, h2 {
-        font-size: 24px;
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
     }
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }

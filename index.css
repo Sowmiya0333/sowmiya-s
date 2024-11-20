@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Hahmlet', sans-serif;                                           
     color: #080811; /* Dark text color */
     background: linear-gradient(to bottom, #1d1c1c, #1d1a1a); /* Very dark background */
     transition: background-color 0.5s;
@@ -50,7 +50,7 @@ nav ul li a.active {
 
 /* Profile Section */
 .profile-section {
-    padding-top: 90px;
+    padding-top: 40px;
     margin-bottom: 40px;
     text-align: center;
     color: #ffffff;
@@ -89,7 +89,7 @@ h1 {
     margin-bottom: 10px;
     font-weight:700;
     letter-spacing: 1.2px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Georgia', serif;
 }
 
 h2 {
@@ -97,7 +97,7 @@ h2 {
     color: #444444; /* Dark text for contrast */
     margin-bottom: 20px;
     font-weight:700;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Georgia', serif;
 }
 
 /* Text Styling */
@@ -111,13 +111,14 @@ p {
 /* Vision and Mission Sections */
 .vision-section, .mission-section {
     margin-bottom: 40px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .vision-container, .mission-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 30px;
+    gap: 10px;
+    padding: 20px;
     background: rgba(250, 250, 250, 0.9); /* Light container */
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -194,16 +195,17 @@ h1:hover, h2:hover {
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
-    .profile-container, .vision-container, .mission-container {
-        padding: 20px;
+    body {
+        font-family: 'Hahmlet', sans-serif;    
+        font-size: 16px;
     }
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
     h2 {
         font-size: 18px;
     }
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
