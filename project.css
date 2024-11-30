@@ -54,7 +54,7 @@ nav ul li a.active {
     margin-bottom: 40px;
     text-align: center;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 17px;
 }
 
 .profile-container {
@@ -99,7 +99,7 @@ nav ul li a.active {
 }
 
 .profile-container p {
-    font-size: 20px;
+    font-size: 17px;
     color: #1a1717; /* Dark text */
     line-height: 1.7;
     padding: 0 20px;
@@ -147,7 +147,7 @@ nav ul li a.active {
 }
 
 .project-item p {
-    font-size:20px;
+    font-size:17px;
     color: #1a1717; /* Dark text */
     line-height: 1.5;
     font-weight:600;

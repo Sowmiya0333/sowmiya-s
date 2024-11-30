@@ -101,7 +101,7 @@ h2 {
 
 /* Text Styling */
 p {
-    font-size:23px;
+    font-size:17px;
     color: #1a1717; /* Dark text */
     line-height: 1.7;
     padding: 0 20px;
@@ -136,7 +136,7 @@ h2 {
 
 p {
     color: #181616;
-    font-size: 22px;
+    font-size:17px;
     transition: color 0.3s;
 }
 
